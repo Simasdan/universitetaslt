@@ -1,0 +1,140 @@
+@import '../../styles/tools';
+
+.advertCardWrapper {
+    background-color: $color-white;
+    max-width: 79.9rem;
+    width: 100%;
+    border-radius: 1.5rem;
+    margin: 0rem auto;
+    padding: 3.4rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3.4rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    cursor: pointer;
+
+    @include for-tablet-only {
+        max-width: 40rem;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .advertCardHeader {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+
+        @include for-tabletL-only {
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        @include for-phoneL-only {
+            width: 100%;
+            flex-direction: column;
+        }
+
+        .headerImage {
+            height: 17.3rem;
+            border-radius: 1.5rem;
+            max-width: 350px;
+            width: 100%;
+
+            @include for-tabletL-only {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 100%;
+
+                    @include for-tabletL-only {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+
+        .headerContent {
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-direction: column;
+
+            @include for-tabletL-only {
+                gap: 1.2rem;
+            }
+
+            @include for-phoneL-only {
+                gap: 1.5rem
+            }
+
+            .headerTime {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+
+                .timeWrapper {
+                    @include flexbox-centered;
+
+                    gap: 0.6rem;
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    line-height: 2rem;
+                    text-align: left;
+                    color: #3835FF;
+                }
+            }
+
+            h3 {
+                font-size: 1.8rem;
+                font-weight: 700;
+                line-height: 2.4rem;
+                text-align: left;
+                color: #222222;
+
+                @include for-phoneL-only {
+                    margin-bottom: 0.5rem;
+                }
+            }
+
+            button {
+                @include flexbox-centered;
+
+                font-size: 1.2rem;
+                font-weight: 700;
+                line-height: 1.409rem;
+                text-align: center;
+                width: 14.3rem;
+                height: 3.2rem;
+                padding: 0;
+                border: 0.1rem solid #636370;
+                color: #636370;
+
+                &:hover {
+                    background-color: #636370;
+                    color: $color-white;
+                }
+            }
+        }
+
+        h4 {
+            @include flexbox-centered;
+
+            gap: 0.6rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 2rem;
+            text-align: left;
+            color: #3835FF;
+        }
+    }
+}

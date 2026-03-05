@@ -1,0 +1,79 @@
+@import '../../styles/tools';
+
+.buttonWrapper {
+    padding: $spacing-XXXXS $spacing-XS;
+    cursor: pointer;
+    border-radius: $border-radius-button;
+    width: 24.32rem;
+    border: none;
+
+    @include button-M;
+
+    @include for-tablet-only {
+        padding: $spacing-XXXXXXS;
+        width: 18rem;
+    }
+
+    &.regular {
+        background-color: $color-white;
+        color: $color-blue1;
+        border: 0.1rem solid $color-blue1;
+
+        &:hover {
+            background-color: $color-blue1;
+            color: $color-white;
+        }
+    }
+
+    &.popular {
+        background-color: $color-white;
+        color: $color-red;
+        border: 0.1rem solid $color-red;
+    }
+
+    &.iconregular {
+        background-color: $color-blue1;
+        color: $color-white;
+        width: 4.3rem;
+        height: 4.3rem;
+        padding: $spacing-XXXXXXXS;
+        border-radius: 50%;
+
+        @include flexbox-centered;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &.iconpopular {
+        background-color: $color-red;
+        width: 4.3rem;
+        height: 4.3rem;
+        padding: $spacing-XXXXXXXS;
+        border-radius: 50%;
+
+        @include flexbox-centered;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &.title {
+        @include button-L;
+
+        width: auto;
+        background-color: $color-blue1;
+        color: $color-white;
+        border: 0.1rem solid $color-blue1;
+        padding: 0.6rem $spacing-XXXXXL;
+
+        &:hover {
+            background-color: $color-white;
+            color: $color-blue1;
+        }
+    }
+}

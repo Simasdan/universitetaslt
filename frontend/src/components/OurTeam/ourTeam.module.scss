@@ -1,0 +1,120 @@
+@import '../../styles/tools';
+
+.ourTeamWrapper {
+    @include flexbox-centered;
+
+    flex-direction: column;
+    gap: 6.5rem;
+    background-color: $color-white;
+    width: 100%;
+    height: calc(100vh - 97px);
+
+    @include for-tabletL-only {
+        padding: 5rem 0;
+    }
+
+    @include for-phoneS-only {
+        margin: 7rem 1rem;
+    }
+
+    h2 {
+        @include headline-L;
+
+        font-size: 4.3rem;
+        font-weight: 700;
+        line-height: 6.3rem;
+        text-align: center;
+        color: $color-blue1;
+
+        @include for-phoneS-only {
+            font-size: 3.4rem;
+            line-height: 5.6rem;
+        }
+    }
+
+    .memberCardsWrapper {
+        @include flexbox-centered;
+
+        flex-wrap: wrap;
+        gap: 10rem;
+    }
+
+    .carousel {
+        width: 100%;
+        overflow: hidden;
+
+        .carouselInner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+
+            .carouselItem {
+                position: relative;
+
+                .carouselButton {
+                    position: absolute;
+                    top: 30%;
+                    transform: translateY(-50%);
+                    background-color: $color-blue1;
+                    color: $color-white;
+                    border: 0.1rem solid $color-blue1;
+                    width: 4.3rem;
+                    height: 4.3rem;
+                    padding: $spacing-XXXXXXXS;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    z-index: 1;
+                }
+            }
+        }
+
+        .carouselButton:first-of-type {
+            left: -10rem;
+
+            @include for-phoneM-only {
+                left: -5rem;
+            }
+        }
+
+        .carouselButton:last-of-type {
+            right: -10rem;
+
+            @include for-phoneM-only {
+                right: -5rem;
+            }
+        }
+    }
+
+    .ourteamCarButton {
+
+        button {
+            @include flexbox-centered;
+
+            width: 22.3rem;
+            height: 4rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1.761rem;
+            text-align: center;
+
+            @include for-tabletL-only {
+                font-size: 2.5rem;
+                line-height: 3rem;
+                padding: 1rem 5.2rem;
+                font-size: 2rem;
+            }
+
+            @include for-phoneM-only {
+                font-size: 2.5rem;
+                line-height: 2rem;
+            }
+
+            @include for-phoneS-only {
+                font-size: 1.6rem;
+                padding: 0.8rem 3.2rem;
+            }
+        }
+    }
+}

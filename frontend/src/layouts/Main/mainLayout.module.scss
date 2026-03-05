@@ -1,0 +1,15 @@
+@import '../../styles/tools';
+
+.container {
+    // max-width: 132rem;
+    width: 100%;
+    margin: 0 auto;
+
+    .mainWrapper {
+        background-color: $color-gray4;
+        display: flex;
+
+        @include flexbox-centered;
+        flex-direction: column;
+    }
+}

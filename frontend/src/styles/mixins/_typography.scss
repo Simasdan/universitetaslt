@@ -1,0 +1,107 @@
+// use case:
+// @include headline-L
+
+@mixin headline-L {
+    font-size: 6.5rem;
+    font-weight: 700;
+    line-height: 7.6rem;
+    text-align: center;
+}
+
+@mixin headline-L-mobile {
+    font-size: 7.5rem;
+    font-weight: 700;
+    line-height: 8.6rem;
+    text-align: left;
+}
+
+@mixin headline-M {
+    font-size: 2.8rem;
+    font-weight: 300;
+    line-height: 3.6rem;
+    text-align: center;
+}
+
+@mixin headline-M-mobile {
+    font-size: 3.2rem;
+    font-weight: 300;
+    line-height: 3.8rem;
+    text-align: left;
+}
+
+@mixin headline-S {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+    text-align: left;
+}
+
+@mixin headline-S-mobile {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 4rem;
+    text-align: left;
+}
+
+@mixin headline-XS {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    text-align: left;
+}
+
+@mixin button-L {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 4.109rem;
+    text-align: center;
+}
+
+@mixin button-L-mobile {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 4.696rem;
+    text-align: center;
+}
+
+@mixin button-M {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.878rem;
+    text-align: center;
+}
+
+@mixin button-M-mobile {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 2.818rem;
+    text-align: center;
+}
+
+@mixin body-M {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    text-align: left;
+}
+
+@mixin body-M-mobile {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 3.9rem;
+    text-align: left;
+}
+
+@mixin body-S {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    text-align: left;
+}
+
+@mixin body-S-mobile {
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 3.9rem;
+    text-align: left;
+}

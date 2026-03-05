@@ -1,0 +1,92 @@
+// articlepageskeleton.module.scss
+
+@import '../../styles/tools';
+
+.ArticlePageSkeleton {
+  width: 80vw; // Use viewport width to ensure it takes the full screen width
+  max-width: 80%; // Ensure it does not exceed the viewport width
+  box-sizing: border-box; // Include padding and borders in the element's total width
+  margin: 0; // Remove any margins that might affect the width
+  padding: $spacing-XL $spacing-XXXXXXXXL $spacing-XXXXXL $spacing-XXXXXL;
+  background-color: #e0e0e0; // Skeleton background color
+
+  @media (max-width: 950px) {
+    width: 95vw; // Use viewport width to ensure it takes the full screen width
+    max-width: 95%; // Ensure it does not exceed the viewport widt
+  }
+
+  @include for-tablet-only {
+    margin: $spacing-XL $spacing-XXS;
+    padding: $spacing-XL;
+  }
+
+  @include for-tabletL-only {
+    max-width: 100%;
+  }
+
+  @include for-tabletS-only {
+    max-width: 100%;
+  }
+
+  @include for-phoneS-only {
+    padding: $spacing-XXS;
+    margin: $spacing-XXXXS;
+  }
+
+  .headerWrapper {
+    display: flex;
+    gap: $spacing-XXXXL;
+    align-items: flex-start; // Align items to the top for this layout
+
+    @include for-tablet-only {
+      gap: $spacing-S;
+    }
+
+    @include for-tabletS-only {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .headerImageSkeleton {
+      width: 100%;
+      max-width: 29.821rem;
+      height: 17.214rem; // Adjust height for image
+      background-color: #c0c0c0; // Skeleton image color
+      border-radius: $border-radius-small;
+    }
+
+    .headerTitleWrapper {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: $spacing-XXXXL;
+
+      .headerTitleSkeleton {
+        width: 70%;
+        height: 2rem; // Adjust height for title
+        background-color: #c0c0c0;
+        border-radius: $border-radius-small;
+      }
+
+      .headerButtonSkeleton {
+        width: 30%;
+        height: 2.5rem; // Adjust height for button
+        background-color: #c0c0c0;
+        border-radius: $border-radius-small;
+      }
+    }
+  }
+
+  .articleSummary {
+    margin-top: $spacing-XXXXL;
+
+    .articleContentSkeleton {
+      width: 100%;
+      height: 20rem; // Adjust height for content area
+      background-color: #c0c0c0;
+      border-radius: $border-radius-small;
+      margin-top: $spacing-XXXXL;
+    }
+  }
+}

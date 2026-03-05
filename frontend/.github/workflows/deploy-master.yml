@@ -1,0 +1,25 @@
+name: Deploy to Linux Server MASTER
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  run_pull:
+    name: run pull
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: install ssh keys
+        run: |
+          install -m 600 -D /dev/null ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          ssh-keyscan -H 212.24.111.204 > ~/.ssh/known_hosts
+      - name: connect and pull
+        run: ssh root@212.24.111.204 "cd /var/www/universitetas.lt_v3 && git stash && git checkout master && git pull && exit"
+      - name: build container & start
+        run: ssh root@212.24.111.204 "cd /var/www/universitetas.lt_v3 && npm install && npm run build && exit"
+      - name: cleanup
+        run: rm -rf ~/.ssh

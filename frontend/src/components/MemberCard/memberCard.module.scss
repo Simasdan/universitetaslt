@@ -1,0 +1,49 @@
+@import '../../styles/tools';
+
+.memberCard {
+    @include flexbox-centered;
+
+    flex-direction: column;
+
+    figure {
+
+        width: 18rem;
+        height: 18rem;
+        border-radius: 50%;
+        outline: none;
+        overflow: hidden;
+        margin-bottom: 2.6rem;
+
+        img {
+            width: 18rem;
+            height: 18rem;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+
+    h4 {
+        @include headline-S;
+
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 3.6rem;
+        text-align: center;
+        color: $color-primary;
+    }
+
+    h5 {
+        color: #222222;
+        margin-bottom: 1.3rem;
+        font-size: 1.5rem;
+        font-weight: 300;
+        line-height: 3.6rem;
+        text-align: center;
+    }
+
+    .memberCardButtonWrapper {
+        @include flexbox-centered;
+
+        gap: 0.8rem;
+    }
+}

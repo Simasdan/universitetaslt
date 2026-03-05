@@ -1,0 +1,25 @@
+@import '../../styles/tools';
+
+.cardsWrapper {
+    display: flex;
+    gap: $spacing-XXS;
+    margin-bottom: $spacing-XXXXXL;
+    justify-content: center;
+    margin-top: $spacing-XXXL;
+    max-width: calc(100% - 5rem);
+
+    @include for-tabletL-only {
+        margin-left: $spacing-XXS;
+        margin-right: $spacing-XXS;
+    }
+
+    @include for-tablet-only {
+        flex-direction: column-reverse;
+    }
+
+    @include for-phoneS-only {
+        margin: 2rem 1.2rem;
+        width: unset;
+        align-items: center;
+    }
+}

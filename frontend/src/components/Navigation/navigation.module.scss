@@ -1,0 +1,160 @@
+@import '../../styles/tools';
+
+.navigationBackground {
+    background-color: $color-white;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+}
+
+.navigationWrapper {
+    background-color: $color-white;
+    max-width: 128rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: $spacing-XXS 2.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+
+    @include for-phoneS-only {
+        padding: 1rem 1.2rem;
+    }
+
+
+    .navigationLogo {
+        @include flexbox-centered;
+
+        height: 5.7rem;
+
+        svg {
+
+            @include for-phoneM-only {
+                width: 30rem;
+            }
+
+            @include for-phoneS-only {
+                width: 25rem;
+            }
+        }
+    }
+
+    .navigation {
+        display: flex;
+
+        .burgerIcon {
+            display: none;
+            cursor: pointer;
+
+            @include for-tabletL-only {
+                display: flex;
+            }
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 1.6rem;
+
+            @include for-tabletL-only {
+                flex-direction: column;
+                display: none;
+            }
+
+            .addsButton {
+                @include flexbox-centered;
+
+                gap: 1.6rem;
+                width: 16.5rem;
+                height: 3.8rem;
+                text-wrap: nowrap;
+                font-size: 1.2rem;
+                color: white;
+                background-color: #3835FF;
+                border: none;
+                border-radius: 5rem;
+                padding: 0 1.8rem;
+                cursor: pointer;
+            }
+
+            a {
+                text-decoration: none;
+
+                li {
+                    text-decoration: none;
+                    list-style-type: none;
+                    cursor: pointer;
+
+                    text-decoration: none;
+                    font-size: 2.2rem;
+                    font-weight: 700;
+                    line-height: 2.2rem;
+                    text-align: left;
+                    border: none;
+                    outline: none;
+                    color: $color-gray4;
+
+                    &:hover svg path {
+                        fill: $color-blue1;
+                    }
+                }
+
+                li.straipsniaiNav {
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    line-height: 2.2rem;
+                    text-align: center;
+                    color: #3835FF;
+                }
+            }
+        }
+
+        &.mobileNavigation {
+            flex-direction: column;
+        }
+
+        .mobileLinkFacebook {
+            width: 3.9rem;
+        }
+
+        .mobileNavigationList {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            position: absolute;
+            right: 0;
+            top: 9.7rem;
+            background-color: $color-blue1;
+            padding: 1.2rem;
+            border-bottom-left-radius: 2rem;
+
+            @include for-phoneS-only {
+                top: 7.7rem;
+            }
+        }
+
+        .mobileNavigationListItem {
+            display: flex;
+            justify-content: flex-start;
+            padding: 1.2rem 0;
+        }
+
+        .addsButtonSmall {
+            text-decoration: none;
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 2.2rem;
+            text-align: left;
+            border: none;
+            outline: none;
+            color: #F7F7F7;
+            background-color: #3835FF;
+            padding: 1.2rem 0;
+            cursor: pointer;
+        }
+    }
+}

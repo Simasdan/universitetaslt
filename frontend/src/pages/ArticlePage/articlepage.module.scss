@@ -1,0 +1,102 @@
+@import '../../styles/tools';
+
+.ArticlePage {
+    margin: 8.6rem $spacing-XXS;
+    max-width: 108.6rem;
+    width: 100%;
+    border-radius: $border-radius-small;
+    padding: $spacing-XL $spacing-XXXXXXXXL $spacing-XXXXXL $spacing-XXXXXL;
+    background-color: $color-white;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-XXXXL;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+    @include for-tablet-only {
+        margin: $spacing-XL $spacing-XXS;
+        gap: $spacing-XXL;
+        padding: $spacing-XL;
+    }
+
+    @include for-tabletL-only {
+        max-width: unset;
+        width: unset;
+    }
+
+    @include for-tabletS-only {
+        max-width: unset;
+        width: unset;
+    }
+
+    @include for-phoneS-only {
+        padding: $spacing-XXS;
+        max-width: unset;
+        width: unset;
+        margin: $spacing-XXXXS;
+    }
+
+    .headerWrapper {
+        display: flex;
+        align-items: flex-end;
+        gap: $spacing-XXXXL;
+
+        @include for-tablet-only {
+            gap: $spacing-S;
+        }
+
+        @include for-tabletS-only {
+            flex-direction: column;
+            align-items: baseline;
+        }
+
+        figure {
+            border-radius: $border-radius-small;
+            overflow: hidden;
+        }
+
+        figure, img {
+            max-width: 29.821rem;
+            width: 100%;
+            max-height: 17.214rem;
+            height: 100%;
+
+            @include for-phoneS-only {
+                max-width: unset;
+                max-height: unset;
+            }
+        }
+
+        .headerTitleWrapper {
+            max-height: 17.214rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+            gap: $spacing-XXXXL;
+
+            h1 {
+                @include headline-S;
+            }
+
+            @include for-tabletS-only {
+                gap: $spacing-S;
+            }
+
+            @include for-phoneS-only {
+                gap: $spacing-S;
+            }
+        }
+    }
+
+    .articleSummary {
+
+        .articleContent {
+            @include body-S;
+
+            h2 {
+                margin-bottom: $spacing-XXS;
+            }
+        }
+    }
+}

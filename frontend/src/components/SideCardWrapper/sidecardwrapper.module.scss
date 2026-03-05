@@ -1,0 +1,12 @@
+@import '../../styles/tools';
+
+.sideCardsWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-XXS;
+
+    @include for-phoneS-only {
+        width: 100%;
+        align-items: center;
+    }
+}

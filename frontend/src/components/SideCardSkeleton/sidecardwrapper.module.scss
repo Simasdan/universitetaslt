@@ -1,0 +1,94 @@
+// sidecardwrapper.module.scss
+
+@import '../../styles/tools'; // Ensure to import tools for variables and mixins
+
+.sideCardsWrapper {
+  // margin: auto;
+  // width: 60vw;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-XXS;
+  max-width: 34.5rem;
+  width: 100%;
+  // height: 39.2rem;
+
+  @include for-phoneS-only {
+    width: 100%;
+    align-items: center;
+  }
+
+  @media (max-width: 950px) {
+    width: 95vw;
+    max-width: 95%;
+  }
+}
+
+// PopularCard Skeleton Styles
+.popularCardSkeleton {
+  display: flex;
+  flex-direction: column;
+  // gap: $spacing-XS; // Adjust based on actual spacing in PopularCard
+  gap: 4rem;
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: $border-radius-small;
+  padding: $spacing-S; // Adjust padding to match PopularCard
+  // height: 27.5rem;
+  height: 39.2rem;
+
+  .popularCardImage {
+    width: 100%;
+    // height: 12rem; // Adjust height based on actual image size in PopularCard
+    height: 18.9rem;
+    background-color: #c0c0c0;
+    border-radius: $border-radius-small;
+  }
+
+  .popularCardContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // gap: $spacing-XS;
+    gap: 7rem;
+
+    .popularCardTitle {
+      width: 70%;
+      // height: 1.5rem; // Adjust height based on actual title height in PopularCard
+      height: 4rem;
+      background-color: #c0c0c0;
+      border-radius: $border-radius-small;
+    }
+
+    .popularCardButtonWrapper {
+      display: flex;
+      align-items: center;
+      gap: $spacing-XS;
+
+      .popularCardButton {
+        width: 85%;
+        // height: 2rem; // Adjust height based on actual button size in PopularCard
+        height: 4rem;
+        background-color: #c0c0c0;
+        border-radius: $border-radius-small;
+      }
+
+      .popularCardIconButton {
+        // width: 2rem;
+        width: 4rem;
+        // height: 2rem; // Adjust size based on actual icon button size in PopularCard
+        height: 4rem;
+        background-color: #c0c0c0;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+// SocialCard Skeleton Styles
+.socialCardSkeleton {
+  width: 100%;
+  height: 10rem; // Adjust based on SocialCard size
+  background-color: #e0e0e0;
+  border-radius: $border-radius-small;
+}

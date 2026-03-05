@@ -1,0 +1,132 @@
+@import '../../styles/tools';
+
+.joinusWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: calc(100vh - 9.7rem);
+    gap: 8rem;
+
+    @include for-tabletXL-only {
+        max-width: 124rem;
+        width: 100%;
+        padding: 0 2.5rem;
+    }
+
+    @include for-tablet-only {
+        flex-direction: column;
+        height: unset;
+        padding: 9.4rem 2rem;
+        gap: 5rem;
+    }
+
+    .joinusImageWrapper {
+
+        @include for-tabletXL-only {
+            max-width: 579px;
+            width: 100%;
+        }
+
+        @include for-tablet-only {
+            @include flexbox-centered;
+
+            width: 80%;
+        }
+
+        img {
+
+            @include for-tabletXL-only {
+                width: 100%;
+            }
+
+            @include for-tablet-only {
+                width: 100%;
+                margin: 2rem;
+            }
+        }
+    }
+
+    .joinusTextWrapper {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2.8rem;
+
+        @include for-tablet-only {
+            align-items: center;
+        }
+
+        h2 {
+            color: #3835FF;
+            max-width: 50rem;
+            width: 100%;
+            font-size: 4.3rem;
+            font-weight: 700;
+            line-height: 5.3rem;
+            text-align: left;
+
+            @include for-tablet-only {
+                text-align: center;
+            }
+
+            @include for-phoneS-only {
+                font-size: 3.4rem;
+                line-height: 4.6rem;
+            }
+        }
+
+        p {
+            color: #222222;
+            max-width: 45.7rem;
+            width: 100%;
+            font-size: 1.5rem;
+            font-weight: 300;
+            line-height: 2.5rem;
+            text-align: left;
+            width: 40.8rem;
+            height: 9.2rem;
+
+            @include for-tablet-only {
+                text-align: center;
+            }
+
+            @include for-phoneL-only {
+                // width: 100%;
+                // font-size: 32px;
+                // font-weight: 300;
+                // line-height: 38px;
+            }
+        }
+
+        button {
+            @include flexbox-centered;
+
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1.761rem;
+            text-align: center;
+            width: 22.3rem;
+            height: 4rem;
+
+            @include for-tabletL-only {
+                font-size: 2.5rem;
+                line-height: 3rem;
+                padding: 1rem 5.2rem;
+                font-size: 2rem;
+                margin-top: 3rem;
+            }
+
+            @include for-phoneM-only {
+                font-size: 2.5rem;
+                line-height: 2rem;
+            }
+
+            @include for-phoneS-only {
+                font-size: 1.6rem;
+                padding: 0.8rem 3.2rem;
+            }
+        }
+    }
+}

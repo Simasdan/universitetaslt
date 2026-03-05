@@ -1,0 +1,30 @@
+@import '../../styles/tools';
+
+.inputWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    background-color: $color-gray4;
+    width: 26.9rem;
+    height: 3.8rem;
+    gap: $spacing-XXXS;
+    border-radius: $border-radius-regular;
+    cursor: pointer;
+    padding-left: 2rem;
+    // margin-right: 2.9rem;
+
+    .input {
+        // font-size: 1.8rem;
+        // font-weight: 500;
+        // line-height: 2.2rem;
+        // text-align: left;
+        border: none;
+        background-color: $color-gray4;
+        outline: none;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 2.2rem;
+        text-align: left;
+    }
+}

@@ -1,0 +1,108 @@
+[
+  {
+    "ContainingType": "universitetas_articles.Controllers.AdvertsController",
+    "Method": "AddAdvert",
+    "RelativePath": "api/v1/Adverts/add-advert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "advert",
+        "Type": "universitetas_articles.Data.ViewModels.AdvertVM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "universitetas_articles.Controllers.AdvertsController",
+    "Method": "DeleteAdvert",
+    "RelativePath": "api/v1/Adverts/delete-advert/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "universitetas_articles.Controllers.AdvertsController",
+    "Method": "GetAdvertById",
+    "RelativePath": "api/v1/Adverts/get-advert/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "universitetas_articles.Controllers.AdvertsController",
+    "Method": "GetAdverts",
+    "RelativePath": "api/v1/Adverts/get-adverts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "search",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "universitetas_articles.Controllers.ArticlesController",
+    "Method": "GetArticleById",
+    "RelativePath": "api/v1/Articles/get-article/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "universitetas_articles.Controllers.ArticlesController",
+    "Method": "GetArticles",
+    "RelativePath": "api/v1/Articles/get-articles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "search",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

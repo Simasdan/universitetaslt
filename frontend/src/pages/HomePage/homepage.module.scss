@@ -1,0 +1,174 @@
+@import '../../styles/tools';
+
+.homepageWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 22rem auto;
+
+    @include for-tabletL-only {
+        margin: 15rem auto 20rem;
+    }
+
+    @include for-tablet-only {
+        flex-direction: column-reverse;
+        margin: unset;
+        margin: 5rem 0 3rem;
+    }
+
+    @include for-phoneM-only {
+        height: auto
+    }
+
+    @include for-phoneS-only {
+        margin-bottom: 0;
+    }
+
+    .homepageTextWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        max-width: 50rem;
+        width: 100%;
+        gap: 3rem;
+        flex-direction: column;
+        margin-left: $spacing-XXS;
+        padding: 0 $spacing-XXS;
+
+        h1 {
+            width: 33.5rem;
+            color: $color-blue1;
+            font-size: 4.3rem;
+            font-weight: 700;
+            line-height: 5.3rem;
+            text-align: left;
+
+            @include for-tabletL-only {
+                font-size: 3.4rem;
+                line-height: 4.6rem;
+                margin-top: $spacing-XXXXXL;
+                width: 27.5rem;
+            }
+
+            @include for-tablet-only {
+                text-align: center;
+                margin-top: 0;
+                width: 40rem;
+                font-size: 5rem;
+                line-height: 6rem;
+            }
+
+            @include for-phoneM-only {
+                font-size: 3.4rem;
+                line-height: 4.6rem;
+                width: 27.5rem;
+            }
+        }
+
+        p {
+            @include headline-M;
+
+            color: $color-primary;
+            font-size: 1.5rem;
+            font-weight: 300;
+            line-height: 2.5rem;
+            text-align: left;
+
+
+            @include for-tabletL-only {
+                font-size: 1.4rem;
+                line-height: 2rem;
+                gap: $spacing-M;
+            }
+
+            @include for-tablet-only {
+                text-align: center;
+            }
+
+            @include for-phoneM-only {
+                font-size: 1.8rem;
+                line-height: 3rem;
+            }
+        }
+
+        .buttonsWrapper {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 2rem;
+
+            button {
+                @include button-L;
+                @include flexbox-centered;
+
+                padding: 1.4rem 3.2rem;
+                font-size: 15px;
+                font-weight: 700;
+                line-height: 17.61px;
+                text-align: center;
+                height: 4rem;
+
+                @include for-tabletL-only {
+                    font-size: 2.5rem;
+                    line-height: 3rem;
+                    padding: $spacing-XXXXXXXS $spacing-XXXXS;
+                    font-size: 1.2rem;
+                }
+
+                @include for-phoneM-only {
+                    line-height: 2rem;
+                }
+
+                @include for-phoneS-only {
+                    padding: 1.2rem 3.2rem;
+                }
+            }
+
+
+            @include for-tablet-only {
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        @include for-tabletXL-only {
+            gap: $spacing-XL;
+        }
+
+        @include for-tablet-only {
+            margin: 6rem $spacing-XXL;
+            align-items: center;
+            gap: $spacing-M;
+        }
+
+        @include for-phoneM-only {
+            gap: $spacing-XXS;
+        }
+    }
+
+    .headerImageWrapper {
+        max-width: 74.9rem;
+        width: 100%;
+        max-height: 39.2rem;
+        height: 100%;
+        min-width: 56rem;
+        margin-right: $spacing-XXS;
+
+        @include for-tablet-only {
+            min-width: 50rem;
+            margin-top: $spacing-XL;
+            margin-left: $spacing-XXS;
+        }
+
+        @include for-phoneS-only {
+            min-width: unset;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            padding: 0 $spacing-XXS;
+        }
+    }
+}

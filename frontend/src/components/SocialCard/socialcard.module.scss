@@ -1,0 +1,22 @@
+@import '../../styles/tools';
+
+.socialCardWrapper {
+    width: 100%;
+    border-radius: $border-radius-small;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: sticky;
+    top: 52.9rem;
+    padding: $spacing-XXS;
+
+    @include for-tablet-only {
+        top: 0;
+        position: relative;
+    }
+
+  @media (max-width: 950px) {
+    margin: auto;
+  }
+}
