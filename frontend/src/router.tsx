@@ -10,33 +10,35 @@ import MainAdvertsPage from './pages/MainAdvertsPage/MainAdvertsPage';
 export const router = createBrowserRouter([
     {
         path: '/',
-        element: <MainLayout/>,
-        errorElement: <MainLayout/>,
+        element: <MainLayout />,
+        errorElement: <MainLayout />,
         children: [
             {
                 path: '',
-                element: <HomePage/>
+                element: <HomePage />
             },
             {
                 path: 'straipsniai',
-                element: <ArticlesPage/>
+                element: <ArticlesPage />
             },
             {
                 path: 'straipsniai/:id',
-                element: <ArticlePage/>
+                element: <ArticlePage />
             },
             {
                 path: 'skelbimai',
-                element: <MainAdvertsPage/>
+                element: <MainAdvertsPage />
             },
             {
                 path: 'skelbimai/:id',
-                element: <AdvertPage/>
+                element: <AdvertPage />
             },
             {
                 path: 'ikelti-skelbima',
-                element: <AddAdvertPage/>
+                element: <AddAdvertPage />
             }
         ]
     },
-]);
+], {
+    basename: import.meta.env.BASE_URL
+});
