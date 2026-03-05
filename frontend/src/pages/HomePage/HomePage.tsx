@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import OurTeam from '../../components/OurTeam/OurTeam';
 import JoinUs from '../../components/JoinUs/JoinUs';
 import HereYouWillFind from '../../components/HereYouWillFind/HereYouWillFind';
+import HeroBaner from '../../assets/images/Hero Banner.png';
 
 const HomePage = () => {
 
@@ -32,7 +33,7 @@ const HomePage = () => {
                     </div>
                 </div>
                 <figure className={styles.headerImageWrapper}>
-                    <img src="../../assets/images/Hero Banner.png" alt="Header Image" />
+                    <img src={HeroBaner} alt="Header Image" />
                 </figure>
             </header>
             <OurTeam />
