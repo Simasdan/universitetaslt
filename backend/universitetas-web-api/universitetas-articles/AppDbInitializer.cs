@@ -473,7 +473,7 @@ namespace universitetas_articles
                             - Agile/Scrum žinios",
                             Email = "hr@universitetas.lt",
                             PhoneNumber = "+37060000003",
-                            City = "Kaunas",
+                            City = "Vilnius",
                         },
                         new Advert
                         {
@@ -525,7 +525,7 @@ namespace universitetas_articles
                             - Patirtis su testavimo įrankiais",
                             Email = "hr@universitetas.lt",
                             PhoneNumber = "+37060000005",
-                            City = "Kaunas",
+                            City = "Klaipėda",
                         }
                     );
                 }

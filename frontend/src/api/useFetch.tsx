@@ -16,7 +16,7 @@ function useFetch<T>(endpoint: Endpoint, id?: string): FetchResult<T> {
 
         const fetchData = async() => {
             try {
-                const url = `http://localhost:5249/api/v1/${endpoint}${id ? `/${id}` : ''}`;
+                const url = `${import.meta.env.VITE_API_URL}/api/v1/${endpoint}${id ? `/${id}` : ''}`;
                 const response = await axios.get<T>(url);
                 setData(response.data)
                 setError(false);

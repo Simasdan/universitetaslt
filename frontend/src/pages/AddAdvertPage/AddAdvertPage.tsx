@@ -79,7 +79,7 @@ const AddAdvertPage = ({
     }
 
     try {
-      await axios.post('http://localhost:5249/api/v1/adverts/add-advert/', data);
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/v1/adverts/add-advert/`, data);
       setAlertMessage('Skelbimas sėkmingai paskelbtas!');
     } catch (error) {
       setAlertMessage('Klaida! Bandykite dar kartą.');

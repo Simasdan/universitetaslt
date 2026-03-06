@@ -43,7 +43,7 @@ const AdvertInfoCardWrapper = ({ searchQuery, pageNumber, onPageChange }: Advert
                 params.set('pageNumber', String(pageNumber));
 
                 const response = await axios.get<PaginatedResponse>(
-                    `http://localhost:5249/api/v1/adverts/get-adverts?${params.toString()}`
+                    `${import.meta.env.VITE_API_URL}/api/v1/adverts/get-adverts?${params.toString()}`
                 );
 
                 if (Array.isArray(response.data.items)) {

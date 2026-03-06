@@ -24,7 +24,7 @@ const ArticlePage = () => {
     useEffect(() => {
         const fetchArticle = async () => {
             try {
-                const response = await axios.get(`http://localhost:5249/api/v1/articles/get-article/${id}`);
+                const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/v1/articles/get-article/${id}`);
                 const foundArticle = response.data;
 
                 if (foundArticle) {

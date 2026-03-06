@@ -19,7 +19,11 @@ builder.Services.AddSwaggerGen(options =>
     options.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
 });
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString")));
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("DefaultConnectionString"),
+        sqlOptions => sqlOptions.EnableRetryOnFailure(5, TimeSpan.FromSeconds(30), null!)
+        )
+    );
 builder.Services.AddTransient<ArticlesService>();
 builder.Services.AddTransient<AdvertsService>();
 builder.Services.AddApiVersioning(options =>

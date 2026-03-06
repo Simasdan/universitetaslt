@@ -30,7 +30,7 @@ const AdvertPAge = () => {
     useEffect(() => {
         const fetchAdvert = async () => {
             try {
-                const response = await axios.get(`http://localhost:5249/api/v1/adverts/get-advert/${id}`);
+                const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/v1/adverts/get-advert/${id}`);
                 const foundAdvert = response.data;
 
                 if (foundAdvert) {

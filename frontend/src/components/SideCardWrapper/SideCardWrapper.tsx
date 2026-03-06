@@ -27,7 +27,7 @@ const SideCardWrapper = () => {
         const fetchData = async () => {
             try {
                 const response = await axios.get<{ items: Article[], hasNextPage: boolean }>(
-                    'http://localhost:5249/api/v1/articles/get-articles'
+                    `${import.meta.env.VITE_API_URL}/api/v1/articles/get-articles`
                 );
 
                 if (Array.isArray(response.data.items)) {
