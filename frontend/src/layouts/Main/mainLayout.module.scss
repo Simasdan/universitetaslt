@@ -13,3 +13,35 @@
         flex-direction: column;
     }
 }
+
+.alertDialogContent {
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
+
+    .alertDialogContentTitle {
+        font-size: 2rem;
+    }
+
+    .alertDialogContentDescription {
+        font-size: 1.5rem;
+    }
+
+    .alertDialogFooter {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        button {
+            max-width: 13rem;
+            width: 100%;
+            font-size: 15px;
+            padding: 2rem;
+        }
+    }
+
+    @include for-phoneS-only {
+        max-width: calc(100% - 5rem);
+    }
+}
